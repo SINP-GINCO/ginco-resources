@@ -1,0 +1,1121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Formation des administrateurs régionaux Ginco - 3 mai 2017</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!--custom -->
+		<link rel="stylesheet" href="css/custom.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides container">
+
+				<!-- Header and footer in ginco-bg data-state -->
+
+				<div id="ginco-bg-header">
+					<img src="img/logo-ginco.png" class="logo-ginco"/>
+					<img src="img/logo-sinp.png"/>
+				</div>
+
+				<div id="ginco-bg-footer">
+					<div class="inside">
+					Formation des administrateurs régionaux Ginco - 3 mai 2017 - Séverine Candelier
+					</div>
+				</div>
+
+
+				<section>
+					<p>&nbsp;</p>
+					<h1><img src="img/ginco.png" class="plain"></h1>
+					<h2>Utilisation des plateformes</h2>
+					<h2><small>Formation des administrateurs régionaux</small></h2>
+					<p class="text-center">3 mai 2017 - <em>Séverine Candelier (IGN)</em></p>
+				</section>
+
+				<!-- Introduction -->
+
+				<section data-state="ginco-bg" class="size2">
+						<h2>Plan</h2>
+
+						<ol>
+							<li>Introduction</li>
+							<ul class="fragment">
+								<li>Présentation</li>
+								<li>Documentation</li>
+								<li>Fonctionnalités de Ginco</li>
+								<li>Workflow</li>
+								<li>Terminologie</li>
+							</ul>
+							<li>Configuration des modèles (de données, d'import)</li>
+							<li>Importer des jeux de données</li>
+							<li>La gestion des jeux de données</li>
+							<li>Requêter / Visualiser / Editer les données</li>
+							<li>Utilisateurs, rôles et permissions</li>
+							<li>Evolutions prévues</li>
+						</ol>
+				</section>
+
+				<section data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Introduction > Présentation </div>
+
+					<h2>Les plateformes Ginco</h2>
+					<div class="row">
+						<div class="col-xs-5">
+							<div id="map"></div>
+							<p>+ la plateforme thématique <a href="https://occtax-ginco.ign.fr/">"Occurences de Taxons"</a></p>
+							<p>+ 14 <a href="https://ginco.ign.fr/doc/introduction/presentation.html" >instances de test</a></p>
+						</div>
+						<div class="col-xs-6 col-xs-push-1">
+							<p>&nbsp;</p>
+							<p>Ginco - <strong>G</strong>estion d'<strong>I</strong>nformation <strong>N</strong>aturaliste
+								<strong class="text-green">C</strong>ollaborative et <strong class="text-green">O</strong>uverte -
+								est une application web ministérielle open-source assurant les principales
+								fonctions de plate-forme régionale ou thématique du SINP.</p>
+
+							<p class="text-center">
+								<img src="img/logo-ign.jpg" class="logo plain ign"/>
+								<img src="img/logo-mnhn.jpg" class="logo plain mnhn"/>
+								<img src="img/logo-meem.jpg" class="logo plain"/>
+							</p>
+						</div>
+					</div>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Introduction > Où trouver de la documentation ?</div>
+
+					<div class="row">
+						<div class="col-xs-5">
+							<p class="text-center small-margins"><a href="https://ginco.ign.fr/">https://ginco.ign.fr/</a></p>
+							<img src="img/ginco-resources.png">
+						</div>
+						<div class="col-xs-6 col-xs-push-1">
+							<p class="text-center small-margins"><a href="https://ginco.ign.fr/doc">https://ginco.ign.fr/doc</a></p>
+							<img src="img/doc-utilisateurs.png">
+
+							<p class="text-center small-margins">Documentation contextuelle sur les plateformes</p>
+							<img src="img/aide-en-ligne.png">
+						</div>
+					</div>
+
+					<aside class="notes">
+						Le site ginco.ign.fr est une porte d'entrée vers l'ensemble de la documentation Ginco + SINP. Détailler les liens fournis.
+
+						La doc utilisateur --> On peut l'avoir en PDF.
+
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Introduction > Fonctionnalités</div>
+
+					<h2>Les fonctionnalités de Ginco</h2>
+
+					<ul>
+						<li>La <strong>configuration de modèles de données</strong> naturalistes régionaux, cohérents avec le standard SINP,</li>
+						<li>L'<strong>import de jeux de données</strong> au format CSV,</li>
+						<li>Des <strong>traitements sur les jeux de données</strong>:
+							<ul class="fragment">
+								<li>calcul des <strong>rattachements administratifs</strong>,</li>
+								<li>de la <strong>sensibilité</strong> des observations,</li>
+								<li>contrôles de <strong>conformité au standard SINP</strong>.</li>
+							</ul>
+						</li>
+						<li>La <strong>visualisation et le requêtage</strong> des données,</li>
+						<li>Le <strong>floutage des données sensibles et privées</strong>, en fonction des droits des utilisateurs,</li>
+						<li>L'<strong>édition manuelle</strong> de la sensibilité des données,</li>
+						<li>L'<strong>export des données</strong> au format d'échange du SINP (DEE).</li>
+						<li>Des <strong>notifications aux producteurs de données</strong> lors de l'intégration, la publication, et la transmission à l'INPN de leurs données.</li>
+					</ul>
+
+					<aside class="notes">
+						C'est un système en construction (même si les plateformes sont en prod), on sait que tout n'est pas parfait.
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Introduction > Workflow</div>
+
+					<h2>Le workflow Ginco</h2>
+
+					<img src="img/workflow.png" class="plain total-width">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<section data-state="ginco-bg" class="size3">
+						<div class="breadcrumb">Introduction > Terminologie </div>
+						<h2>Terminologie : DSP/DST/DSR/DEE</h2>
+
+						<h3>DSP = Données Sources Producteur</h3>
+						<p>Les DSP sont les données créées et manipulées par les producteurs, au format et avec les outils de leur choix.
+							Elles ne sont pas forcément partagées en totalité dans le cadre du SINP.
+							Elles sont décrites (ou non) par des métadonnées spécifiques à l’initiative de chaque producteur.
+						</p>
+
+						<h3>DST = Données Sources Transmises</h3>
+						<p>Ce sont les données que les producteurs transmettent aux platesformes R/T.
+							Pour Ginco, pour l'instant, elles sont forcément au format CSV, avec des contraintes de format sur certains champs.
+							Elles représentent tout ou partie des DSP.
+						</p>
+
+						<h3>DSR = Données Sources Régionales</h3>
+						<p>Ce sont les données sources standardisées au niveau régional et rassemblées dans un format pivot entre la DSP et la DEE,
+							le <em>standard régional de données</em>.
+							Il doit impérativement être compatible avec le format national DEE et comporte a minima les mêmes champs obligatoires.
+						</p>
+
+						<h3>DEE = Données Elémentaires d'Echange</h3>
+						<p>Données au format d'échange défini par le standard SINP.
+							Il existe(ra) un format de DEE par thématique du SINP (occurrences de taxons, habitats, espaces protégés,...)</p>
+
+						<aside class="notes">
+							<p>Le producteur doit mettre ses DSP au format CSV, à partir de ses outils, pour qu'elles soient importables dans Ginco.</p>>
+							<p>Physiquement, les DSP sont dans le format de l'outil du producteur (excel, shapefile, base de données, texte...).<br>
+							Les DST sont (pour Ginco) un CSV, format précis défini par le modèle d'import .<br>
+								La DST sera considérée comme publique si elle est financée par des fonds publics.<br>
+								La DST sera de statut privé si elle est financée par des fonds privés.<br>
+							Les DSR sont stockées dans une plusieurs tables d'une bdd PostgreSQL (la structure de la table est définie dans le modèle de données).
+							Les DEE sont échangées sous forme d'un fichier GML.</p>
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg"  class="size3">
+						<div class="breadcrumb">Introduction > Terminologie </div>
+						<h2>Terminologie : DSP/DST/DSR/DEE</h2>
+
+						<img src="img/intro-metadonnees-sinp.png" class="plain">
+						<aside class="notes">
+							Une même fiche de métadonnée est utilisée pour décrire un jeu de données tout au long de son cycle de vie dans le SINP (DST, DSR et DEE).
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg" class="size3">
+						<div class="breadcrumb">Introduction > Terminologie </div>
+						<h2>Différences entre DSP/DSR/DEE</h2>
+						<p><strong>Principe: </strong>les DEE doivent être conformes au standard SINP, par exemple comporter les champs obligatoires du standard.
+						--> Les contraintes de conformité se répercutent sur la DSP, mais:
+							Certains champs sont calculés/attribués automatiquement par Ginco --> La DSR est un format pivot. </p>
+
+						<table class="table"></table>
+
+						<h3>Exemples: </h3>
+						<ul>
+							<li>sensible, sensiNiveau</li>
+							<li>organismeTransformation, dEEdateTransformation</li>
+							<li>departementCalcule, codeDepartementCalcule, etc...</li>
+						</ul>
+
+						<aside class="notes">
+						</aside>
+					</section>
+				</section>
+
+				<!-- Configuration des modèles de données et d'import -->
+
+				<section data-state="ginco-bg" class="size2">
+					<h2>Plan</h2>
+
+					<ol>
+						<li>Introduction</li>
+						<li>Configuration des modèles (de données, d'import)</li>
+						<ul>
+							<li>Les modèles de données</li>
+							<li>Le modèle standard "Occurences de taxon"</li>
+							<li>Les modèles d'import</li>
+							<li>Configurer les modèles régionaux</li>
+							<li>Démo</li>
+						</ul>
+						<li>Importer des jeux de données</li>
+						<li>La gestion des jeux de données</li>
+						<li>Requêter / Visualiser / Editer les données</li>
+						<li>Utilisateurs, rôles et permissions</li>
+						<li>Evolutions prévues</li>
+					</ol>
+				</section>
+
+
+				<section  data-state="ginco-bg"  class="size1">
+					<div class="breadcrumb">Configuration des modèles > Modèles de données</div>
+
+					<h2>Les modèles de données</h2>
+					<div class="row">
+						<div class="col-xs-6">
+							<p>Un modèle de données est une description d’un ensemble de <strong>tables</strong>,
+								de leurs <strong>champs et attributs</strong> et de leurs <strong>relations hiérarchiques</strong>.</p>
+
+							<p>Le configurateur Ginco permet de construire des modèles de données, qui détermineront la
+								<strong>structure dans la base de données</strong> des données importées, mais aussi le
+								<strong>comportement de l'application</strong> (champs calculés, modifiables par l'utilisateur...).</p>
+						</div>
+						<div class="col-xs-5 col-xs-push-1">
+							<img src="img/modele-donnees-general.png" class="plain">
+						</div>
+					</div>
+
+					<aside class="notes">
+						Physiquement le modèle de données Ginco correspond à des tables en base de données.
+						Dans les attributs des champs, certains servent à décrire la base de données (nom, obligatoire...), d'autres
+						sont utilisés par l'application : champ calculé, éditable.
+						On peut avoir théoriquement plusieurs tables, mais on n'a pas dans Ginco une implémentation satisfaisante des clés étrangères.
+						On ne peut donc avoir que des tables "mères" et "filles", un "arbre" de tables (pas de relations n-n par exemple, ou de table se référençant elle-même).
+					</aside>
+				</section>
+
+				<section>
+					<section data-state="ginco-bg"  class="size2">
+						<div class="breadcrumb">Configuration des modèles > Modèle de donnée standard OccTax</div>
+
+						<h2>Le modèle de données standard <br>"Occurence de taxons"</h2>
+
+						<div class="row">
+							<div class="col-xs-6">
+								<p>Chaque plateforme GINCO, régionale ou thématique, est <strong>livrée avec un modèle de données de base</strong>.
+									Ce modèle contient tous les champs nécessaires à l’export des données en DEE
+									et au fonctionnement de la plateforme.</p>
+
+								<p>Il ne comporte qu'<strong>une seule table (observation)</strong>, dont les champs correspondent à ceux
+									du standard DEE ayant été <strong>"mis à plat"</strong>.</p>
+
+								<p>Cette table comporte les <strong>93 champs du standard + 10 champs techniques</strong>.<br>
+									Sur les 103, 15 sont obligatoires, et 18 calculés.<br>
+									5 sont obligatoires <u>et</u> calculés (donc non obligatoires à la livraison).
+								</p>
+							</div>
+							<div class="col-xs-5 col-xs-push-1">
+								<img src="img/modele-donnees-occtax.png" class="plain">
+							</div>
+						</div>
+
+						<aside class="notes">
+							Le standard est en-dessous !!!!
+						</aside>
+					</section>
+
+					<!-- Le standard -->
+					<section>
+						<img src="img/standard-occtax-v1-2-1.png" class="plain">
+						<aside class="notes">
+							Expliquer la mise à plat, comment certains champs se retrouvent obligatoires.
+
+							Introduire la notion de obligatoire conditionnel.
+
+							Gestion de la cardinalité sous forme de tableaux.
+
+						</aside>
+					</section>
+				</section>
+
+				<section  data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Configuration des modèles > Modèles d'import</div>
+
+					<h2>Les modèles d'import</h2>
+
+					<p>Un modèle d’import est une description d’un ensemble de <strong>fichiers</strong> (CSV pour l'instant),
+						de leurs <strong>colonnes</strong>, et des <strong>relations (mappings)</strong> entre les colonnes et les champs des tables du modèle de données associé.
+						</p>
+
+					<p><strong>Les mappings fichier/tables sont décrits en fonction de l'ordre des colonnes</strong> (on attribue un nom à chaque colonne du fichier, mais c'est sa position qui compte) :</p>
+					<ul>
+						<li>la colonne 1 du CSV correspond au champ "identifiantOrigine" du modèle,</li>
+						<li>la colonne 2 du CSV correspond au champ "cdNom" du modèle,</li>
+						<li>etc...</li>
+					</ul>
+
+					<p>Chaque plateforme GINCO, régionale ou thématique, est livrée avec le modèle d’import correspondant au modèle standard DSR Occurence de Taxons.</p>
+
+					<p>On peut créer autant de modèles d'import que l'on veut pour chaque modèle de données.</p>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg">
+					<div class="breadcrumb">Configuration des modèles > Modèles d'import</div>
+
+					<img src="img/modele-donnees-plus-import.png" class="plain" width="55%">
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg"  class="size2">
+					<div class="breadcrumb">Configuration des modèles > Configurer les modèles régionaux</div>
+
+					<h2>Configurer les modèles régionaux</h2>
+
+					<ul>
+						<li>Commencer par <strong>dupliquer le modèle de données standard DSR occ Tax</strong> (Il est impossible de créer un modèle à partir de zéro, c'est un garde-fou de l'application).</li>
+						<li><strong>Rajouter des champs additionnels</strong> si nécessaires (présents dans les données des producteurs mais pas dans le standard)</li>
+						<li>Créer un ou plusieurs <strong>modèles d'import</strong> correspondant aux fichiers de données à intégrer.</li>
+						<li>Pour chaque modèle d'import, commencer par <strong>ajouter les champs obligatoires non calculés</strong> du modèle de données, puis rajouter les autres
+						champs présents dans les fichiers de données.</li>
+						<li><strong>Régler les positions</strong> des colonnes du fichier d'import.</li>
+						<li>Définir les mappings fichier - table en utilisant d'abord l'<strong>outil de mapping automatique</strong>.</li>
+						<li><strong>Publier</strong> les modèles de données et d'import.</li>
+					</ul>
+
+				</section>
+
+				<section data-state="ginco-bg"  class="size2">
+					<div class="breadcrumb">Configuration des modèles > Configurer les modèles régionaux</div>
+					<p>&nbsp;</p><p>&nbsp;</p>
+					<div class="alert alert-warning">
+
+						<h2>Recommandations</h2>
+
+						<p>Créer <strong>un seul modèle de données régional</strong> par type de données comparables (ex : un pour les occurences de taxons, un pour les habitats...).</p>
+						<p>Car on ne peut requêter et visualiser ensemble que les données d'un même modèle de données.</p>
+
+						<p>Mais créer <strong>autant de modèles d'import que nécessaire</strong>, en fonction de la variété des fichiers à importer.</p>
+					</div>
+					<p>&nbsp;</p>
+					<p class="text-center"><a href="https://test-occtax-ginco.ign.fr/" target="_blank">Démo</a></p>
+
+					<aside class="notes">
+						il est plus facile de configurer un modèle d'import que de changer l'ordre des colonnnes dans ses CSV fichiers...
+					</aside>
+				</section>
+
+
+				<!-- Import de données -->
+
+				<section data-state="ginco-bg" class="size2">
+					<h2>Plan</h2>
+
+					<ol>
+						<li>Introduction</li>
+						<li>Configuration des modèles (de données, d'import)</li>
+						<li>Importer des jeux de données</li>
+						<ul>
+							<li>Workflow de l'import</li>
+							<li>Démo</li>
+							<li>Format du fichier d'import</li>
+							<li>Les référentiels utilisés</li>
+							<li>Tests de conformité</li>
+							<li>Traitements de standardisation des données</li>
+						</ul>
+						<li>La gestion des jeux de données</li>
+						<li>Requêter / Visualiser / Editer les données</li>
+						<li>Utilisateurs, rôles et permissions</li>
+						<li>Evolutions prévues</li>
+					</ol>
+				</section>
+
+				<section data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Import > Workflow</div>
+
+					<h2>Workflow de l'import</h2>
+
+					<img src="img/workflow-import.png" class="plain total-width">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg" class="size2">
+					<div class="breadcrumb">Import > Démo</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<p class="text-center">
+								<a href="https://test-occtax-ginco.ign.fr/integration/show-data-submission-page">
+									<img src="img/ginco-jdd.png"><br>
+									<br>
+									Démo
+								</a>
+							</p>
+						</div>
+						<div class="col-xs-5 col-xs-push-1">
+							<p>
+								<img src="img/csv-OK.png" class="plain vcenter"> <a href="https://raw.githubusercontent.com/SINP-GINCO/ginco/zend/tools/dee_test_mnhn.csv"> Fichier d'import OK</a>
+							</p>
+							<p>
+								<img src="img/csv-KO.png" class="plain vcenter"> <a href="https://raw.githubusercontent.com/SINP-GINCO/ginco/zend/tools/dsr_test_conformite_erreurs.csv">Fichier d'import avec erreurs</a>
+							</p>
+						</div>
+					</div>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section id="fichier-import" data-state="ginco-bg"  class="size3">
+					<div class="breadcrumb">Import > Format fichier d'import</div>
+
+					<h2>Format du fichier d'import</h2>
+
+					<div class="row">
+						<div class="col-xs-8">
+							<p>Ces informations sont disponibles sur la <a href="https://ginco.ign.fr/doc/gestion-jdd/format-fichier-import.html">documentation en ligne</a>.</p>
+
+							<h3>Le fichier</h3>
+							<ul>
+								<li>Format <strong>CSV</strong>, <strong>UTF8 sans BOM</strong>, séparateur = <strong>point-virgule</strong>.</li>
+								<li>1 fichier = 1 jeu de données, 1 ligne = 1 donnée.</li>
+								<li>Même <strong>nombre de champs</strong> que le modèle d'import, même vides <br>
+									&rarr; ajouter une ligne d'en-tête débutant par "// " (commentaire)</li>
+								<li>Champs dans le <strong>même ordre</strong> que le fichier d'import</li>
+								<li><strong>Champs obligatoires</strong> dans le modèle d'import <strong>non vides</strong>.</li>
+							</ul>
+						</div>
+						<div class="col-xs-4">
+							<img src="img/fichier-import-modele.png"  class="plain">
+						</div>
+					</div>
+
+					<h3>Les champs</h3>
+					<ul>
+						<li><strong>Dates et dates/heures:</strong> Format défini dans le modèle dimport. Par défaut: <code>yyyy-MM-dd'T'HH:mmZ</code>.
+							Voir la <a href="https://ginco.ign.fr/doc/annexes/dates.html">description du format de dates</a>.</li>
+						<li><strong>Booléens:</strong> Les valeurs “1”, “true” et “TRUE” sont équivalentes à “vrai”; toutes les autres valeurs sont équivalentes à “faux”. </li>
+						<li><strong>Tableaux:</strong> Certains champs peuvent comporter une liste de valeurs, dont le type peut être quelconque.
+							Celles-ci doivent être séparées par des virgules, facultativement entourées par des accolades.
+							Par exemple, pour le codedepartement : <code>23,36,86,87</code> ou <code>{23,36,86,87}</code></li>
+						<li><strong>Géométries:</strong> au format WKT. Tous SRID acceptés, à préciser à l'import. Types acceptés:
+							points (<code>POINT(5.35 48.41)</code>), multipoints, lines, multilines, polygons, multipolygons. </li>
+						<li><strong>Codes (référentiels, nomenclatures)</strong>: valeur exacte du référentiel ou de la nomenclature. Sensible à la casse.</li>
+					</ul>
+
+					<aside class="notes">
+						On peut télécharger un modèle de fichier d'import sur le formulaire d'import.
+						Les champs obligatoires et les formats des dates sont indiqués.
+
+						Pour les champs, on a en plus les champs texte (limités ou non en nombre de caractères), entiers et décimaux.
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg"  class="size3">
+					<div class="breadcrumb">Import > Référentiels</div>
+
+					<h2>Les référentiels</h2>
+
+					<p>Les champs du standard suivants utilisent des référentiels (&ne; nomenclatures) : </p>
+					<table class="table">
+						<thead>
+						<tr>
+							<th>Champ</th>
+							<th>Référentiel</th>
+							<th>Version (dans Ginco V1.0.1)</th>
+							<th>Où le trouver</th>
+						</tr>
+						</thead>
+						<tr>
+							<td><code>codeCommune, nomCommune</code></td>
+							<td>GEOFLA</td>
+							<td>2015</td>
+							<td><a href="http://professionnels.ign.fr/geofla">http://professionnels.ign.fr/geofla</a></td>
+						</tr>
+						<tr>
+							<td><code>codeDepartement</code></td>
+							<td>GEOFLA</td>
+							<td>2015</td>
+							<td><a href="http://professionnels.ign.fr/geofla">http://professionnels.ign.fr/geofla</a></td>
+						</tr>
+						<tr>
+							<td><code>codeMaille</code></td>
+							<td>Grille nationale 10x10km</td>
+							<td>2011 et 2012</td>
+							<td><a href="https://inpn.mnhn.fr/telechargement/cartes-et-information-geographique/ref/referentiels">Disponible sur l'INPN</a></td>
+						</tr>
+						<tr>
+							<td><code>codeEn, typeEn</code></td>
+							<td>Base INPN</td>
+							<td>Extrait de mars 2017</td>
+							<td><a href="https://inpn.mnhn.fr/telechargement/cartes-et-information-geographique/">Sur l'INPN</a><br>
+							<a href="https://ginco.ign.fr/ref/espaces_naturels_last.csv">extrait utilisé dans Ginco</a></td>
+						</tr>
+						<tr>
+							<td><code>codeME</code></td>
+							<td> - </td>
+							<td> - </td>
+							<td>Implémenté comme un champ texte</td>
+						</tr>
+						<tr>
+							<td><code>cdNom, cdRef</code></td>
+							<td>TAXREF</td>
+							<td>10.0</td>
+							<td><a href="https://inpn.mnhn.fr/telechargement/referentielEspece/referentielTaxo">Disponible sur l'INPN</a></td>
+						</tr>
+						<tr>
+							<td><code>codeHabRef, codeHabitat</code></td>
+							<td>HABREF et les autres typologies Habitats</td>
+							<td>HABREF: 2.0 <br>(maj vers 3.1 prévue prochainement)</td>
+							<td><a href="https://inpn.mnhn.fr/telechargement/referentiels/habitats">Disponibles sur l'INPN</a></td>
+						</tr>
+						<tr>
+							<td><code>codeIDCNP</code></td>
+							<td>-</td>
+							<td>-</td>
+							<td>Implémenté comme un champ texte, et <em>obsolète</em></td>
+						</tr>
+					</table>
+
+					<p>Les <strong>nomenclatures</strong> sont disponibles sur le <a href="http://standards-sinp.mnhn.fr/wp-content/uploads/sites/16/versionhtml/OccTax_v1_2_1/">site des standards du SINP</a>
+						(dossier "Nomenclatures" dans l'onglet de gauche du standard en ligne).</p>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<section data-state="ginco-bg"  class="size3">
+						<div class="breadcrumb">Import > Tests de conformité</div>
+
+						<h2>Tests de conformité effectués lors de l'import</h2>
+
+						<div class="alert alert-warning">
+							<strong>Note :</strong> à l'heure actuelle, toutes les erreurs de conformité sont bloquantes lors de l'import.
+						</div>
+
+						<p>L'application effectue deux types de contrôles (improprement appelés <em>conformité</em> et <em>cohérence</em>) : </p>
+						<ul>
+							<li><strong>des vérifications de format</strong> sur le fichier et sur chaque champ correspondant à la <a href="#/fichier-import">description du fichier d'import</a>.
+							Voir la <a href="https://ginco.ign.fr/doc/gestion-jdd/rapport-erreur.html#erreurs-de-conformite">liste complète</a>.</li>
+							<li>des contrôles inter-champs / inter-lignes garantissant la <strong>conformité des données au standard</strong> (<a href="https://ginco.ign.fr/doc/gestion-jdd/rapport-erreur.html#erreurs-de-coherence">liste complète</a>).</li>
+						</ul>
+
+						<p>Les erreurs remontent dans le "Rapport de Conformité et cohérence".
+							<a href="files/Error_Report_100.pdf"> Exemple de rapport d'erreur</a>
+						</p>
+
+						<h3>Contrôles de conformité au standard réalisés :</h3>
+						<ul>
+							<li><strong>Présence ou absence de "Concepts" du standard</strong> (champs obligatoires conditionnels).<br>
+							&rarr; Si un ou plusieurs des attributs d'un concept sont fournis, alors tous ses attributs obligatoires doivent être fournis.</li>
+							<li><strong>Cardinalité des concepts</strong> (nombre d'éléments des tableaux identiques).<br>
+							&rarr; Si un concept est fourni <em>n</em> fois, alors tous ses attributs implémentés par un type tableau doivent comporter <em>n</em> éléments.<br>
+							Exemple : <code>codeCommune, nomCommune</code>.</li>
+							<li><strong>Géoréférencement manquant / Plusieurs géoréférencements</strong></li>
+							<li>Version Taxref manquante, Référence bibliographique manquante</li>
+							<li>Incohérence entre les champs de preuve, Incohérence entre les champs d’habitat</li>
+							<li>PreuveNumerique n’est pas une url </li>
+							<li>Période d’observation</li>
+
+						</ul>
+
+						<aside class="notes">
+							L'actuelle distinction conformité / cohérence vient d'Ogam. Les erreurs de conformité empêchent l'insertion des données en base.
+							Les erreurs de cohérence ne l'empêchent pas et pourraient théoriquement être non-bloquantes. Par contre, les contrôles devraient être impérativement passés avant l'export DEE.
+						</aside>
+					</section>
+
+					<!-- Le standard -->
+					<section>
+						<img src="img/standard-occtax-v1-2-1.png" class="plain">
+						<aside class="notes">
+							Expliquer la mise à plat, comment certains champs se retrouvent obligatoires.
+							Introduire la notion de obligatoire conditionnel.
+							Gestion de la cardinalité sous forme de tableaux.
+
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+					<section data-state="ginco-bg"  class="size2">
+						<div class="breadcrumb">Import > Traitements</div>
+
+						<h2>Traitements de standardisation des données effectués lors de l'import</h2>
+
+						<ul>
+							<li><strong>Report de l'identifiant de métadonnée</strong> dans chaque donnée,</li>
+							<li>Attribution d'un <strong>identifiant permanent pour chaque donnée</strong> <em>si il n'est pas fourni</em>.
+							<br>C'est un UUID (format <code>8-4-4-4-12</code>, exemple <code>123e4567-e89b-12d3-a456-426655440000</code>).</li>
+							<li>Calcul des <strong>rattachements administratifs</strong>,</li>
+							<li>Calcul de la <strong>sensibilité des observations</strong>.</li>
+						</ul>
+
+						<aside class="notes">
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg"  class="size3">
+						<div class="breadcrumb">Import > Traitements</div>
+
+						<h2>Calcul des rattachement administratifs</h2>
+
+						<div class="row">
+							<div class="col-xs-5" style="position: relative;">
+								<img src="img/rattachements-theoriques.png" style="position: absolute; top: 0; left: 0;" class="total-width">
+								<img src="img/rattachements-ginco.png" class="fragment total-width" style="position: absolute; top: 0; left: 0;">
+							</div>
+
+							<div class="col-xs-6 col-xs-push-1">
+
+								<div class="alert alert-warning">
+									<h3>Condition</h3>
+									<p>Un et un seul <strong>géoréférencement</strong> doit être fourni parmi :</p>
+									<ul>
+										<li>la <strong>géométrie précise</strong>,</li>
+										<li>une ou plusieurs <strong>communes</strong>,</li>
+										<li>une ou plusieurs <strong>mailles 10x10km</strong>,</li>
+										<li>un ou plusieurs <strong>départements</strong>.</li>
+									</ul>
+									<p>Dans ces trois derniers cas, le champ <code>typeInfoGeo</code> de l'entité qui géoréférence doit valoir 1.</p>
+								</div>
+
+								<p>Dans tous les cas, dès lors qu'un géoréférencement est fourni, l'observation est rattachée
+									à toutes les autres couches, inférieures et supérieures.</p>
+
+								<p><code>géométrie < commune < maille < département</code></p>
+
+								<p>&rarr; les champs <em>techniques</em> suivants sont remplis :
+								<br><code>codeCommuneCalcule, nomCommuneCalcule, codeMailleCalcule, codeDepartementCalcule</code>.
+								<br>Ces champs ne font pas partie du standard et ne sont pas transmis dans les DEE.</p>
+
+							</div>
+						</div>
+						<p>&rarr; détaillé dans la note
+							<a href="https://ginco.ign.fr/doc/_downloads/note_representation_carto_dee_v0.4.pdf">
+								Géoréférencement des oc currences d'observation de taxons et représentation	cartographique dans Ginco.</a></p>
+
+						<aside class="notes">
+							Dans le cas où l'on veut indiquer une précision sur la localisation, sans géoréférencer l'objet, on met typeInfoGeo à 2.
+							Exemple: une observation dont on a la géométrie, mais on sait que c'est sur sur la commune de Marcilly.
+
+							Les champs calculés servent au calcul de la sensibilité, puis à la représentation par couche et au floutage.
+
+							Il n'y a que les champs livrés par le producteur qui sont transmis dans la DEE.
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg"  class="size2">
+						<div class="breadcrumb">Import > Traitements</div>
+
+						<h2>Calcul des rattachement administratifs</h2>
+
+						<h3>Cas: géoréférencement par une géométrie</h3>
+						<div class="row">
+							<div class="col-xs-5">
+								<img src="img/rattachements-geometrie-1.png" class="plain total-width">
+							</div>
+							<div class="col-xs-5 col-xs-push-2">
+								<img  src="img/rattachements-geometrie-2.png" class="plain total-width fragment">
+							</div>
+						</div>
+						<aside class="notes">
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg"  class="size2">
+						<div class="breadcrumb">Import > Traitements</div>
+
+						<h2>Calcul des rattachement administratifs</h2>
+						<h3>Cas: géoréférencement par une entité administrative (maille)</h3>
+						<div class="row">
+							<div class="col-xs-5">
+								<img src="img/rattachements-maille-1.png" class="plain total-width">
+							</div>
+							<div class="col-xs-5 col-xs-push-2">
+								<img  src="img/rattachements-maille-2.png" class="plain total-width fragment" style="position: absolute; top: 0; left: 0; background-color: white;">
+								<img  src="img/rattachements-maille-3.png" class="plain total-width fragment" style="position: absolute; top: 0; left: 0; background-color: white;" >
+								<img  src="img/rattachements-maille-4.png" class="plain total-width fragment" style="position: absolute; top: 0; left: 0; background-color: white;">
+							</div>
+						</div>
+
+						<aside class="notes">
+							Pour les couches "inférieures" (= plus précise), on englobe la géométrie de l'entité administrative.
+							Pour la géométrie, on a choisi (implémentation Ginco), d'utiliser la bounding box de ou des entités.
+							Pour les géométries supérieures, idem.
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg"  class="size3">
+						<div class="breadcrumb">Import > Traitements</div>
+
+						<h2>Calcul de la sensibilité des observations<br>
+						<small>Données d'entrée</small></h2>
+
+						<div class="row">
+							<div class="col-xs-5">
+								<p>L'application attribue à chaque observation un <strong>niveau de sensibilité</strong> qui
+									détermine sa précision de diffusion:</p>
+								<table class="table">
+									<tr>
+										<td>0</td>
+										<td>Non sensible</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>Sensible: diffusion à la <strong>commune</strong></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Sensible: diffusion à la <strong>maille</strong></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Sensible: diffusion au <strong>département</strong></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Sensible: <strong>aucune diffusion</strong> (cas exceptionnel)</td>
+									</tr>
+								</table>
+
+								<p>Pour chaque observation, Ginco détermine la sensibilité en fonction des attributs suivants :
+									<code>cdNom, cdRef, occStatutBiologique, jourDateFin, codeDepartementCalcule</code>,</p>
+
+								<p>Et utilise le <strong>référentiel de sensibilité</strong>.</p>
+
+							</div>
+							<div class="col-xs-6 col-xs-push-1 well">
+								<h3>Le référentiel de sensibilité</h3>
+								<p>Il est fourni à GINCO par la plateforme nationale (INPN). Il aggrége une liste nationale et
+									des listes régionales, qui <strong>remplacent complètement</strong>
+									la liste nationale pour chaque région concernée.
+
+								<p>Le référentiel est constitué d'une ligne par combinaison<br>
+								<em>département x espèce sensible (x statut biologique) (x commentaire)</em> :</p>
+								<table class="table">
+									<tr>
+										<td><code>CD_DEPT</code></td>
+										<td>code INSEE du département</td>
+									</tr>
+									<tr>
+										<td><code>CD_NOM</code></td>
+										<td>code du taxon valide</td>
+									</tr>
+									<tr>
+										<td><code>NOM_CITE</code></td>
+										<td>nom du taxon cité dans la liste</td>
+									</tr>
+									<tr>
+										<td><code>CD_OCC_STATUT_BIO.</code></td>
+										<td>statut biologique pour lequel s’applique la règle de sensibilité</td>
+									</tr>
+									<tr>
+										<td><code>DUREE</code></td>
+										<td>durée d’application  en années</td>
+									</tr>
+									<tr style="border-bottom: 3px solid black;">
+										<td><code>AUTRE</code></td>
+										<td>commentaire conditionnant la sensibilité</td>
+									</tr>
+									<tr>
+										<td><code>CODAGE</code></td>
+										<td>code de sensibilité</td>
+									</tr>
+									<tr>
+										<td><code>CD_SL</code></td>
+										<td>id. de la liste de sensibilité</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+						<aside class="notes">
+							La diffusion en fonction de la sensibilité ne s'applique que pour les personnes n'ayant pas la permission "Voir les données ensibles"
+
+							Si un référentiel régional existe, le référentiel national n'est plus pris en compte du tout pour la région concernée. Par exemple si
+							une espèce est sensible au niveau national, mais pas dans le référentiel régional, l'espèce n'est pas considérée comme sensible.
+
+							<p>Les codes de taxons fournis à GINCO sont ceux de la version en vigueur de TAXREF lors de la fourniture du référentiel à GINCO.</p>
+
+							<p>La sensibilité ne s’applique pas pour les données marines.</p>
+						</aside>
+					</section>
+
+					<section data-state="ginco-bg"  class="size3">
+						<div class="breadcrumb">Import > Traitements</div>
+
+						<h2>Calcul de la sensibilité des observations<br>
+							<small>Résultats et cas de la sensibilité manuelle</small></h2>
+
+						<div class="row">
+							<div class="col-xs-6">
+								<p>Les <strong>attributs DEE</strong> suivants sont remplis :</p>
+								<table class="table">
+									<tr>
+										<td><code>sensiNiveau</code></td>
+										<td>le niveau entre 0 et 4</td>
+									</tr>
+									<tr>
+										<td><code>sensible</code></td>
+										<td>booléen, 0 ou 1 (sensiNiveau > 0)</td>
+									</tr>
+									<tr>
+										<td><code>sensiDateAttribution</code></td>
+										<td>date d'attribution de la sensibilité</td>
+									</tr>
+									<tr>
+										<td><code>sensiReferentiel</code></td>
+										<td>le référentiel de sensibilité utilisé (national, régional)</td>
+									</tr>
+									<tr>
+										<td><code>sensiVersionReferentiel</code></td>
+										<td>sa version</td>
+									</tr>
+								</table>
+
+								<p>Ainsi que les <strong>champs techniques</strong> suivants :</p>
+								<table class="table">
+									<tr>
+										<td><code>sensiAlerte</code></td>
+										<td>booléen, mis à '1' si la ligne du référentiel de sensibilité appliquée comporte un commentaire
+											 calcul <em>automatique</em> impossible.</td>
+									</tr>
+									<tr>
+										<td><code>sensiManuelle</code></td>
+										<td>booléen, vaut '0' lors du calcul, est mis à '1' lorsque la sensibilité a été éditée manuellement.</td>
+									</tr>
+								</table>
+
+								<p>Quand <code>sensiAlerte</code> vaut '1', la sensibilité <strong>doit être éditée manuellement par l'administrateur</strong>.</p>
+							</div>
+
+							<div class="col-xs-5 col-xs-push-1">
+								<h3>Rapport de sensibilité</h3>
+								<img src="img/lien-rapport-sensibilite.png">
+
+								<h3>Requêter et éditer manuellement les données à sensibiliser</h3>
+								<img src="img/sensibilite-requete-predefinie.png">
+
+							</div>
+						</div>
+
+						<aside class="notes">
+							La diffusion en fonction de la sensibilité ne s'applique que pour les personnes n'ayant pas la permission "Voir les données ensibles"
+
+							Si un référentiel régional existe, le référentiel national n'est plus pris en compte du tout pour la région concernée. Par exemple si
+							une espèce est sensible au niveau national, mais pas dans le référentiel régional, l'espèce n'est pas considérée comme sensible.
+
+							<p>Les codes de taxons fournis à GINCO sont ceux de la version en vigueur de TAXREF lors de la fourniture du référentiel à GINCO.</p>
+
+							<p>La sensibilité ne s’applique pas pour les données marines.</p>
+						</aside>
+					</section>
+				</section>
+
+				<!-- Gestion des jeux de données -->
+
+				<section data-state="ginco-bg" class="size2">
+					<h2>Plan</h2>
+
+					<ol>
+						<li>Introduction</li>
+						<li>Configuration des modèles (de données, d'import)</li>
+						<li>Importer des jeux de données</li>
+						<li>La gestion des jeux de données</li>
+						<ul>
+							<li>Les états de la DSR et de la DEE</li>
+							<li>Générerer les DEE</li>
+							<li>Démo</li>
+						</ul>
+						<li>Requêter / Visualiser / Editer les données</li>
+						<li>Utilisateurs, rôles et permissions</li>
+						<li>Evolutions prévues</li>
+					</ol>
+				</section>
+
+				<section data-state="ginco-bg"  class="size3">
+					<div class="breadcrumb">Gestion des JDD > Etats du JDD</div>
+
+					<h2>Les états de la DSR et de la DEE</h2>
+
+					<img src="img/liste-jdd.png">
+
+					<div class="row">
+						<div class="col-xs-5">
+							<p><strong>Les DSR</strong> peuvent être :</p>
+							<ul>
+								<li>vides (jeu de données créé sans import),</li>
+								<li>en erreur (import avec erreur),</li>
+								<li>importées et non publiées,</li>
+								<li>publiées (disponibles à la consultation et exportables en DEE),</li>
+								<li>supprimées.</li>
+							</ul>
+						</div>
+						<div class="col-xs-5 col-xs-push-2">
+							<p><strong>Les DEE</strong> peuvent être :</p>
+							<ul>
+								<li>vides (pas encore d'export DEE),</li>
+								<li>générées,</li>
+								<li>supprimées.</li>
+							</ul>
+							<p>&nbsp;</p>
+							<p>Générer les DEE: <a href="https://test-occtax-ginco.ign.fr/">Démo</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+				<!-- Requête et visualisation -->
+
+				<section data-state="ginco-bg" class="size2">
+					<h2>Plan</h2>
+
+					<ol>
+						<li>Introduction</li>
+						<li>Configuration des modèles (de données, d'import)</li>
+						<li>Importer des jeux de données</li>
+						<li>La gestion des jeux de données</li>
+						<li>Requêter / Visualiser / Editer les données &rarr; <a href="https://test-occtax-ginco.ign.fr">Démo</a></li>
+						<ul>
+							<li>Le requêteur</li>
+							<li>Visualisation des résultats: vue carte / vue tableau</li>
+							<li>L'export CSV</li>
+							<li>Visualisation par "bacs" et floutage des données sensibles/privées</li>
+							<li>Les requêtes enregistrées et prédéfinies</li>
+						</ul>
+						<li>Utilisateurs, rôles et permissions</li>
+						<li>Evolutions prévues</li>
+					</ol>
+				</section>
+
+				<!-- Utilisateurs -->
+
+				<section data-state="ginco-bg" class="size2">
+					<h2>Plan</h2>
+
+					<ol>
+						<li>Introduction</li>
+						<li>Configuration des modèles (de données, d'import)</li>
+						<li>Importer des jeux de données</li>
+						<li>La gestion des jeux de données</li>
+						<li>Requêter / Visualiser / Editer les données</li>
+						<li>Utilisateurs, rôles et permissions  &rarr; <a href="https://test-occtax-ginco.ign.fr">Démo</a></li>
+						<li>Evolutions prévues</li>
+					</ol>
+
+					<aside class="notes">
+						Un rôle définit un ensemble de permissions.
+						Un utilisateur a un ou plusieurs rôles.
+						Les permissions de chaque utilisateur sont l'union (la somme) des permissions de ses rôles.
+						Détailler les permissions.
+
+						Montrer également comment régler l'email de contact de la plateforme.
+					</aside>
+				</section>
+
+				<!-- Evolutions prévues -->
+
+				<section data-state="ginco-bg"  class="size2">
+					<div class="breadcrumb">Evolutions prévues</div>
+
+					<h2>Evolutions de Ginco prévues d'ici fin 2017</h2>
+
+					<ul>
+						<li>Des évolutions du <strong>processus d'import de données</strong>, pour :</li>
+						<ul>
+							<li>rendre les <strong>erreurs de conformité au standard non bloquantes</strong> pour l'import, mais bloquantes pour l'export DEE
+							(découpler l'import et les tests de conformité),</li>
+							<li>remonter toutes les erreurs (bloquantes/non bloquantes) <strong>en une seule fois</strong> dans le rapport,</li>
+							<li>importer des <strong>shapefile</strong>,</li>
+							<li>importer des <strong>DEE (gml)</strong>, provenant par exemple de la plateforme nationale.</li>
+						</ul>
+						<li><strong>Traitement par lots</strong> des données.</li>
+						<li>Améliorer le formulaire d'<strong>édition manuelle de la sensibilité</strong>.</li>
+						<li>Brancher Ginco sur l'<strong>annuaire du SINP</strong> (organismes et personnes).</li>
+						<li><strong>Export des shapefile</strong>.</li>
+						<li>Prendre en compte l'<strong>évolution des standards et référentiels</strong>.</li>
+					</ul>
+
+					<aside class="notes">
+						Note sur les versions: VX.Y.Z.
+						Changelog dans le Github
+					</aside>
+				</section>
+
+				<section data-state="ginco-bg"  class="size2">
+					<div class="breadcrumb">Conclusion</div>
+
+					<h2>Conclusion : pour démarrer l'utilisation de Ginco</h2>
+
+					<ul>
+						<li>Pensez à utiliser l'aide en ligne : <a href="https://ginco.ign.fr">https://ginco.ign.fr</a>, en particulier la documentation utilisateur.</li>
+						<li>N'hésitez pas à communiquer avec l'équipe Ginco : </li>
+						<ul>
+							<li>via le Redmine : <a href="http://redmine-sinp.ign.fr">http://redmine-sinp.ign.fr</a></li>
+							<li>par mail: <img src="img/email-sinp-dev.png" class="plain" style="margin: 0 5px; vertical-align: middle">
+								pour toute question technique, <img src="img/email-jp.png" class="plain"  style="margin: 0 5px; vertical-align: middle"> pour les questions métier.</li>
+						</ul>
+					</ul>
+
+					<h2 class="fragment">Questions ?</h2>
+					<p>&nbsp;</p>
+
+					<div class="fragment">
+						<h2>Présentation du TP</h2>
+						<ul>
+							<li><strong>Première partie :</strong> utilisation d'un fichier d'import préparé</li>
+							<li><strong>Deuxième partie :</strong> utilisation de votre propre fichier d'import</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// Display the page number of the current slide
+				slideNumber: true,
+
+				// Vertical centering of slides
+				center: false,
+
+				// The "normal" size of the presentation, aspect ratio will be preserved
+				// when the presentation is scaled to fit different resolutions. Can be
+				// specified using percentage units.
+				width: 1200,
+				height: 900,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.05,
+
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.2,
+				maxScale: 1.0,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+		<!-- The map -->
+		<script type="text/javascript" src="js/raphael.min.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+	</body>
+</html>
