@@ -84,7 +84,7 @@
                 fonctions de plate-forme régionale ou thématique du SINP.</p>
 
             <p>Ginco est co-developpé par le Ministère de la Transition écologique et solidaire (MTES), l'Institut national
-                de l'information géographique et forestière, et le Museum National d’Histoire Naturelle (MNHN).</p>
+                de l'information géographique et forestière (IGN), et le Museum National d’Histoire Naturelle (MNHN).</p>
 
             <p class="text-center">
                 <img src="/images/logo-ign.jpg" alt="IGN - Institut National de l'Information Géographique et forestière" class="logo ign"/>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="col-xs-4 text-center">
                     <i class="fa fa-github big" aria-hidden="true"></i>
-                    <h3><a href="https://github.com/SINP-GINCO/ginco/tree/zend">Documentation technique</a></h3>
+                    <h3><a href="https://github.com/SINP-GINCO/ginco">Documentation technique</a></h3>
                     <p>Accéder au code source, voir la liste des évolutions selon les versions, installer une instance Ginco.</p>
                 </div>
             </div>
@@ -168,19 +168,15 @@
                 </div>
                 <div class="col-xs-6 col-xs-push-1">
                     <h3 class="no-margin-top">Plateformes Ginco</h3>
-                    <p>Actuellement 7 plateformes régionales sont accessibles en production, pour les régions
-                        <a href="https://grandest-ginco.ign.fr/" >Grand Est</a>,
-                        <a href="https://centre-valdeloire-ginco.ign.fr/" >Centre-Val de Loire</a>,
-                        <a href="https://nouvelleaquitaine-ginco.ign.fr/" >Nouvelle Aquitaine</a>,
-                        <a href="https://midipyrenees-ginco.ign.fr/" >Midi-Pyrénées</a>,
-                        <a href="https://languedocroussillon-ginco.ign.fr/" >Languedoc-Roussillon</a>,
-                        la <a href="https://corse-ginco.ign.fr/" >Corse</a>,
-                        et la <a href="https://guyane-ginco.ign.fr/" >Guyane</a>.
+                    <p>Actuellement 8 plateformes régionales sont accessibles en production (voir carte), ainsi que 13
+                        <a href="https://ginco.naturefrance.fr/doc-ginco-prod/introduction/presentation.html" >instances de test</a>.
                     </p>
-                    <p>Une plateforme thématique nationale, gérée par le MNHN, est également accessible : la <a href="https://occtax-ginco.ign.fr/" >Plateforme OccTax</a>.</p>
-                    <p>Et enfin, des <a href="https://ginco.naturefrance.fr/doc-ginco-prod/introduction/presentation.html" >instances de test</a> sont ouvertes pour 18 régions.</p>
+                    <p>Une plateforme thématique nationale, gérée par le MNHN, est également accessible : la <a href="https://ginco.naturefrance.fr/occtax/" >Plateforme OccTax</a>.</p>
                     <p>Pour obtenir un compte sur l'une quelconque de ces plateformes, merci d'utiliser le formulaire de contact de chaque site, qui
                     dirigera votre message directement vers l'administrateur de la plateforme.</p>
+                    <p>Une plateforme dédiée au dépôt legal des données de biodiversité, fondée sur Ginco,
+                        <a  href="https://depot-legal-biodiversite.naturefrance.fr/test/" >est ouverte en test</a>.
+                        La version de production, permettant le dépôt effectif des données, ouvrira en juin 2018.</p>
 
                     <h3>Métadonnées</h3>
                     <p>Les fiches de métadonnées des jeux de données uploadés dans les plateformes Ginco doivent être créées, ou récupérées,
@@ -194,7 +190,14 @@
         <div class="container">
             <h2 class="underlined green">Actualités</h2>
 
-            <h3>Migration en Symfony 2 des plateformes de test</h3>
+            <h3>Passage en V2 des plateformes Ginco</h3>
+            <p><em>mars 2018</em></p>
+            <p>Les plateformes Ginco de production ont été migrées sur la V2 de l'application, en test depuis le mois d'aout.
+                Cette nouvelle version bénéficie d'un coeur plus moderne, d'un design amélioré, et de nouvelles fonctionnalités :
+                connexion avec son compte INPN, import de fichiers shapefile, possibilité d'importer les jeux de données
+                en plusieurs fichiers...</p>
+
+            <p>&nbsp;</p><h3>Migration en Symfony 2 des plateformes de test</h3>
             <p><em>août 2017</em></p>
             <p>Les plateformes Ginco de test ont été migrées sur le framework Symfony 2. Cette refonte est isofonctionnelle,
                 mais ouvre la voie à des évolutions plus faciles, et un design plus moderne. Les plateformes de production
